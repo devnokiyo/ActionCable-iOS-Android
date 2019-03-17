@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ActionCableApp</string>
+
+    <string name="user">ユーザー</string>
+    <string name="chiyo">千代</string>
+    <string name="eru">エル</string>
+    <string name="otome">乙女</string>
+
+    <string name="room">ルーム</string>
+    <string name="tuna">まぐろ</string>
+    <string name="egg">たまご</string>
+    <string name="salmon_roe">いくら</string>
+
+    <string name="subscribe">購読</string>
+
+    <string name="bawbaw">ワンワン</string>
+    <string name="waooon">ワオーーン</string>
+    <string name="mumbling">独り言</string>
+
+    <string name="out">( ˘ω˘ )</string>
+    <string name="in">(^○^)</string>
+
+    <string name="icon">icon</string>
+    <string name="name">name</string>
+
+</resources>

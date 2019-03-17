@@ -1,0 +1,6 @@
+framework module Pods_ActionCableAppUITests {
+  umbrella header "Pods-ActionCableAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

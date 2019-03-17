@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ActionCableApp</string>
+
+    <string name="user">User</string>
+    <string name="chiyo">Chiyo</string>
+    <string name="eru">Eru</string>
+    <string name="otome">Otome</string>
+
+    <string name="room">Room</string>
+    <string name="tuna">Tuna</string>
+    <string name="egg">Egg</string>
+    <string name="salmon_roe">SalmonRoe</string>
+
+    <string name="subscribe">Subscribe</string>
+
+    <string name="bawbaw">BawBaw</string>
+    <string name="waooon">Waooon</string>
+    <string name="mumbling">Mumbling</string>
+
+    <string name="out">Zzz..Zzz..</string>
+    <string name="in">Hello!!</string>
+
+    <string name="icon">icon</string>
+    <string name="name">name</string>
+
+</resources>

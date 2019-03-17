@@ -1,0 +1,13 @@
+default: &default
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") { "redis://cache:6379/0" } %>
+  channel_prefix: app_production
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

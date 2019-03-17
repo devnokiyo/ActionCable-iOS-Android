@@ -1,0 +1,20 @@
+platform :ios, '10.0'
+use_frameworks!
+
+def install_pods
+  pod "ActionCableClient"
+end
+
+target 'ActionCableApp' do
+  install_pods
+end
+
+target 'ActionCableAppTests' do
+    inherit! :search_paths
+    install_pods
+end
+
+  target 'ActionCableAppUITests' do
+    inherit! :search_paths
+    install_pods
+end

@@ -1,0 +1,20 @@
+PODS:
+  - ActionCableClient (0.2.3):
+    - Starscream (~> 2.0.0)
+  - Starscream (2.0.4)
+
+DEPENDENCIES:
+  - ActionCableClient
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActionCableClient
+    - Starscream
+
+SPEC CHECKSUMS:
+  ActionCableClient: c8a466410d31bfa14e7a9c209b539c1e2d026a5f
+  Starscream: df5974ee928b157c8eda8af8de7c620276b7dfcc
+
+PODFILE CHECKSUM: 9fdeac7c1c3df3834917de62bc1541bb6e70e2ff
+
+COCOAPODS: 1.5.3
