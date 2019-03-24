@@ -33,27 +33,21 @@ class RoomChannel < ApplicationCable::Channel
 
   class << self
     private def roommate(key:)
-      Rails.cache.read(key)
+      REDIS.smembers(key) || []
     end
 
     private def room_in(key:, account:)
       ROOMMATE_COUNTER_MUTEX.synchronize do
-        list = Rails.cache.read(key) || []
-        list << account
-        list.uniq!
-        Rails.cache.write(key, list)  
-        list
-      end
+        REDIS.sadd(key, account)
+        REDIS.smembers(key) || []
+        end
     end
 
     private def room_out(key:, account:)
       ROOMMATE_COUNTER_MUTEX.synchronize do
-        list = Rails.cache.read(key) || []
-        list.delete_if {|item| item == account }
-        list.uniq!
-        Rails.cache.write(key, list)
-        list
-      end
+        REDIS.srem(key, account)
+        REDIS.smembers(key) || []
+        end
     end
   end
 
