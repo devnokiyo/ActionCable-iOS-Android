@@ -1,1 +1,1 @@
-REDIS = Redis.new(host: ENV.fetch("REDIS_HOST"), port: ENV.fetch("REDIS_PORT"), db: ENV.fetch("REDIS_DB"))
+REDIS = Redis.new(host: ENV.fetch("REDIS_HOST") { "cache" }, port: ENV.fetch("REDIS_PORT") { "6379" }, db: ENV.fetch("REDIS_DB") { "0" })
