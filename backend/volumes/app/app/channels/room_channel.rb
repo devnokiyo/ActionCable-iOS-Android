@@ -37,8 +37,7 @@ class RoomChannel < ApplicationCable::Channel
     end
 
     private def room_in(key:, account:)
-      locker = Mutex::new
-      locker.synchronize do
+      ROOMMATE_COUNTER_MUTEX.synchronize do
         list = Rails.cache.read(key) || []
         list << account
         list.uniq!
@@ -48,8 +47,7 @@ class RoomChannel < ApplicationCable::Channel
     end
 
     private def room_out(key:, account:)
-      locker = Mutex::new
-      locker.synchronize do
+      ROOMMATE_COUNTER_MUTEX.synchronize do
         list = Rails.cache.read(key) || []
         list.delete_if {|item| item == account }
         list.uniq!
